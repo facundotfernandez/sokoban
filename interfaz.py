@@ -9,7 +9,9 @@ def _datos_ventana(juego):
 def mostrar_juego(juego):
     """Actualizar el tablero en la ventana"""
     try:
+        alto_ventana, ancho_ventana = _datos_ventana(juego)
         gamelib.draw_begin()
+        gamelib.draw_rectangle(0, 0, ancho_ventana+2, alto_ventana+2, fill='#738b8b')
         for fila in range(juego['niveles'][juego['nivel_actual']]['filas']):
             for columna in range(juego['niveles'][juego['nivel_actual']]['columnas']):
                 gamelib.draw_image(datos.IMAGENES[juego['grilla'][fila][columna]], columna*datos.DIM_CELDA+datos.TABLERO_CORRIDO, fila*datos.DIM_CELDA+datos.TABLERO_CORRIDO)
