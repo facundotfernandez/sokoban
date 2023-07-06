@@ -23,10 +23,21 @@ def mostrar_juego(juego):
 
 def mostrar_controles(juego):
     """Mostrar cartel con controles del juego"""
-    controles = ""
+    teclas_por_accion = {}
     for accion in juego['acciones']:
-        guiones = "-"*(10-len(accion))
-        controles += f"{accion} {guiones}> {juego['acciones'][accion]}"
+        accion = accion.capitalize()
+        if juego['acciones'][accion] not in teclas_por_accion:
+            teclas_por_accion[juego['acciones'][accion]] = [accion]
+        elif accion in teclas_por_accion[juego['acciones'][accion]]:
+            continue
+        else:
+            teclas_por_accion[juego['acciones'][accion]].append(accion)
+    controles = ""
+    for control in teclas_por_accion:
+        guiones = "-"*(12-len(control))
+        controles += f"{control} {guiones}>"
+        for tecla in teclas_por_accion[control]:
+            controles += f"  {tecla}  ||"
         controles += "\n"
     gamelib.say(f"CONTROLES DEL JUEGO\n\n{controles}")
 

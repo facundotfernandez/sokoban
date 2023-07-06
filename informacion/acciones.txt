@@ -8,11 +8,20 @@ a = OESTE
 s = SUR
 d = ESTE
 
+W = NORTE
+A = OESTE
+S = SUR
+D = ESTE
+
 r = REINICIAR
+R = REINICIAR
 
 z = DESHACER
 x = REHACER
+Z = DESHACER
+X = REHACER
 
 p = PISTA
+P = PISTA
 
 Escape = SALIR
