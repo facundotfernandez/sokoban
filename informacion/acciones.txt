@@ -3,25 +3,24 @@ Left = OESTE
 Down = SUR
 Right = ESTE
 
+W = NORTE
 w = NORTE
+A = OESTE
 a = OESTE
+S = SUR
 s = SUR
+D = ESTE
 d = ESTE
 
-W = NORTE
-A = OESTE
-S = SUR
-D = ESTE
-
-r = REINICIAR
 R = REINICIAR
+r = REINICIAR
 
-z = DESHACER
-x = REHACER
 Z = DESHACER
+z = DESHACER
 X = REHACER
+x = REHACER
 
-p = PISTA
 P = PISTA
+p = PISTA
 
 Escape = SALIR
